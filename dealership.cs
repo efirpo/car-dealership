@@ -6,6 +6,10 @@ public class Car
   public string MakeModel;
   public int Price;
   public int Miles;
+  public bool PriceRange(int maxPrice)
+  {
+    return (Price < maxPrice);
+  }
 }
 
 public class Program
@@ -36,7 +40,19 @@ public class Program
 
     List<Car> cars = new List<Car>() { volkswagen, yugo, ford, amc };
 
+    Console.WriteLine("Enter max price: ");
+    int maxPrice = int.Parse(Console.ReadLine());
+    List<Car> CarsInPriceRange = new List<Car>(0);
+
     foreach (Car automobile in cars)
+    {
+      if (automobile.PriceRange(maxPrice))
+      {
+        CarsInPriceRange.Add(automobile);
+      }
+    }
+
+    foreach (Car automobile in CarsInPriceRange)
     {
       Console.WriteLine(automobile.MakeModel);
     }
