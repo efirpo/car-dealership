@@ -29,7 +29,10 @@ public class Program
 
       foreach (Car automobile in CarsInPriceRange)
       {
-        Console.WriteLine(automobile.MakeModel);
+        Console.WriteLine("--------------------------");
+        Console.WriteLine(automobile.GetMakeModel());
+        Console.WriteLine(automobile.GetMiles() + " miles");
+        Console.WriteLine("$" + automobile.GetPrice());
       }
     }
   }
