@@ -15,6 +15,8 @@ public class Program
 
       List<Car> cars = new List<Car>() { volkswagen, yugo, ford, amc };
 
+      amc.SetPrice(200);
+
       Console.WriteLine("Enter max price: ");
       int maxPrice = int.Parse(Console.ReadLine());
       List<Car> CarsInPriceRange = new List<Car>(0);

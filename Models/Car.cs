@@ -24,6 +24,10 @@ namespace Dealership.Models
   {
     return _miles;
   }
+  public void SetPrice(int newPrice)
+  {
+    _price = newPrice;
+  }
   public bool PriceRange(int maxPrice)
   {
     return (_price < maxPrice);
